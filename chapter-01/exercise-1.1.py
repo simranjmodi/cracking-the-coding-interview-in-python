@@ -6,10 +6,6 @@ Implement an algorithm to determine if a string has all unique characters.
 """
 
 def is_unique_chars(str):
-    """
-    Time Complexity: O(n) where n is the length of the string
-    Space Complexity: O(1)
-    """
     if len(str) > 128:
         return False
 
