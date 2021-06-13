@@ -29,6 +29,3 @@ def replaceSpaces(str):
             string[index] = string[j]
             index -= 1
     return ''.join(string)
-
-s = "a b c   "
-print(replaceSpaces(s))
