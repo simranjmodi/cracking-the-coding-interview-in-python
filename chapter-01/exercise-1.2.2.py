@@ -4,8 +4,7 @@
 Given two strings, write a method to decide if one is a permutation of the other.
 Assuming comparison is case sensitive and whitespace is significant.
 
-Solution 2
-
+Solution 2: Optimal approach checking if two strings have identical character counts
 """
 
 def permuation(s,t):

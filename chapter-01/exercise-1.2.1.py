@@ -4,8 +4,7 @@
 Given two strings, write a method to decide if one is a permutation of the other.
 Assuming comparison is case sensitive and whitespace is significant.
 
-Solution 1
-
+Solution 1: Non optimal approach of sorting of two strings
 """
 
 def sort(s):
