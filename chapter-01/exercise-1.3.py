@@ -2,7 +2,6 @@
 1.3 URLify
 
 Write a method to replace all spaces in a string with %20.
-
 """
 
 def replaceSpaces(str):
