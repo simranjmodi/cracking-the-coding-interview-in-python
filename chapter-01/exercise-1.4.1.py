@@ -6,8 +6,7 @@ a palindrome. A palindrome is a word or phrase that is the same
 forwards and backwards. A permutation is a rearrangement of letters.
 The palindrome does not need to be limited to just dictionary words.
 
-Solution 1
-
+Solution 1: Using hash table to count # of times each character appears
 """
 
 def check_max_one_odd(table):
