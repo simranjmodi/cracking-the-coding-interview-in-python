@@ -8,7 +8,7 @@ the elements less than x. The partition element x can appear anywhere
 in the "right partition"; it does not need to appear between the left
 and right partitions.
 
-
+Solution 1: "Stable" approach where elements stay in original order
 """
 
 class Node:
