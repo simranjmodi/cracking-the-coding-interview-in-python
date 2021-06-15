@@ -8,7 +8,6 @@ linked list is the exact same node (by reference) as the jth node of
 second linked list, then they are intersecting.
 """
 
-
 class Node:
     def __init__(self,data):
         self.data = data
