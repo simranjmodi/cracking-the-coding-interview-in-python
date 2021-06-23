@@ -8,7 +8,7 @@ Solution 1: In Order Traversal (Assuming no duplicate elements)
 
 last_printed = None
 
-class Node:
+class TreeNode:
     def __init__(self, data):
         self.data = data
         self.left = None

@@ -7,18 +7,19 @@ Solution 2: Min/Max Solution using min and max values for progressively
 narrower ranges as iterating through the tree.
 """
 
-class Node:
+class TreeNode:
     def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
 
 
-root = Node(4)
-root.left = Node(2)
-root.right = Node(5)
-root.left.left = Node(1)
-root.left.right = Node(3)
+
+root = TreeNode(4)
+root.left = TreeNode(2)
+root.right = TreeNode(5)
+root.left.left = TreeNode(1)
+root.left.right = TreeNode(3)
 """
         4
     2       5
