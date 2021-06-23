@@ -23,6 +23,7 @@ def check_height(root):
     right_height = check_height(root.right)
     if right_height == -2:
         return -2
+
     height_diff = left_height - right_height
     if abs(height_diff) > 1:
         return -2
