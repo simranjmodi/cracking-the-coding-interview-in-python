@@ -6,13 +6,11 @@ all the nodes at each depth (e.g. if you have a tree with depth D, you
 will have D linked lists)
 """
 
-
-# TO FIX
-
+from collections import deque
 
 class TreeNode:
     def __init__(self, data):
-        self.data = data
+        self.val = data
         self.left = None
         self.right = None
 
@@ -24,11 +22,6 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
-
-    def insert(self, data):
-        new_node = Node(data)
-        new_node.next = self.head
-        self.head = new_node
 
     def size(self):
         current = self.head
@@ -61,41 +54,27 @@ class LinkedList:
 
         return 0
 
-def create_level_linked_list(root, lists, level):
-    if root is None:
-        return
 
-    list = None
-    if lists.size() == level:
-        list = LinkedList()
-        lists.append(list)
-    else:
-        list = lists.get(level)
+def create_level_linked_list(root: TreeNode):
+    queue = deque([root] if root else [])
+    ans = LinkedList()
 
-    list.append(root)
-    create_level_linked_list(root.left, lists, level+1)
-    create_level_linked_list(root.right, lists, level+1)
+    while len(queue):
+        qlen = len(queue)
+        row = LinkedList()
 
-def main(root):
-    lists = LinkedList()
-    create_level_linked_list(root, lists, 0)
-    return lists
+        for _ in range(qlen):
+            curr = queue.popleft()
+            row.append(curr)
 
-""" 
-        4
-    2       3
-  5   6   7    8
+            if curr.left:
+                queue.append(curr.left)
+
+            if curr.right:
+                queue.append(curr.right)
+
+        ans.append(row)
+    return ans
 
 
-"""
-
-root = TreeNode(4)
-root.left = TreeNode(2)
-root.left.left = TreeNode(5)
-root.left.right = TreeNode(6)
-root.right = TreeNode(3)
-root.right.left = TreeNode(7)
-root.right.right = TreeNode(8)
-
-lst = main(root)
 
