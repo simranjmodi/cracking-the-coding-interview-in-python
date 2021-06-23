@@ -13,19 +13,18 @@ class TreeNode:
         self.left = None
         self.right = None
 
+def check_BST(n):
+    return check_BST_aux(n, None, None)
 
+def check_BST_aux(n, min, max):
+    if n is None:
+        return True
 
-root = TreeNode(4)
-root.left = TreeNode(2)
-root.right = TreeNode(5)
-root.left.left = TreeNode(1)
-root.left.right = TreeNode(3)
-"""
-        4
-    2       5
- 1     3
-"""
-if (check_BST(root)):
-    print("Is BST")
-else:
-    print("Not a BST")
+    if (min is not None and n.data <= min) or (max is not None and n.data > max):
+        return False
+
+    if (not check_BST_aux(n.left, min, n.data)) or (not check_BST_aux(n.right, n.data, max)):
+        return False
+
+    return True
+
