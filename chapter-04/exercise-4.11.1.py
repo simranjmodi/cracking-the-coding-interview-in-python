@@ -6,6 +6,8 @@ insert, find, and delete, has a method get_random_node() which returns a random 
 from the tree. All nodes should be equally likely to be chosen. Design and implement
 an algorithm for get_random_node(), and explain how you would implement the rest of
 the methods.
+
+Solution 1: Using size determine which random node to return
 """
 
 from random import randint
@@ -21,9 +23,6 @@ class TreeNode:
 
     def get_size(self):
         return self.size
-
-    def data(self):
-        return self.data
 
     def insert_in_order(self, d):
         if d <= self.data:
