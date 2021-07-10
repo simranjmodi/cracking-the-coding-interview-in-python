@@ -15,5 +15,3 @@ def print_power_set(set):
             if ((counter & (1 << j)) > 0):
                 print(set[j], end="")
         print("")
-
-print_power_set([1,2,3])
