@@ -27,4 +27,5 @@ def check_valid(columns, row1, column1):
         row_distance = row1-row2
         if column_distance == row_distance:
             return False
+        row2 += 1
     return True
