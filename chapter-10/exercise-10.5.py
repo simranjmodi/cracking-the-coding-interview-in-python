@@ -6,7 +6,7 @@ write a method to find the location of a given string.
 """
 
 
-def sparse_search(arr, key, low, high):
+def search(arr, key, low, high):
     left = 0
     right = 0
 
